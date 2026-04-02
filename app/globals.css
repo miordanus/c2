@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-orange: #E8810A;
+  --bg: #0f0e0d;
+  --surface: #191816;
+  --border: #272522;
+  --text-primary: #ede9e1;
+  --text-muted: #6b6760;
+}
+
+html {
+  background-color: #0f0e0d;
+  color: #ede9e1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #0f0e0d;
+}
+
+* {
+  box-sizing: border-box;
+}
