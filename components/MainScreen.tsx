@@ -61,20 +61,20 @@ export default function MainScreen() {
           </p>
 
           {/* Hours */}
-          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed mt-0.5">
+          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed mt-4">
             Вс–Чт · 12:00–23:00&nbsp;&nbsp;·&nbsp;&nbsp;Пт–Сб · 12:00–01:00
           </p>
 
           {/* Phone */}
           <a
             href="tel:+79677550150"
-            className="mt-6 font-inter text-text-primary text-[21px] sm:text-[22px] font-normal leading-none tracking-tight hover:text-brand-orange transition-colors duration-200"
+            className="mt-4 font-inter text-text-primary text-[21px] sm:text-[22px] font-normal leading-none tracking-tight hover:text-brand-orange transition-colors duration-200"
           >
             +7 967 755-01-50
           </a>
 
           {/* Map buttons */}
-          <div className="mt-6 flex flex-row gap-3">
+          <div className="mt-4 flex flex-row gap-3">
             <a
               href="https://2gis.ru/yoshkarola/firm/70000001110338386?m=47.882863%2C56.639735%2F16"
               target="_blank"
@@ -98,7 +98,7 @@ export default function MainScreen() {
           {/* Email — secondary */}
           <a
             href="mailto:brigadir@tseh2.ru"
-            className="mt-5 font-inter text-brand-orange text-[12px] font-bold hover:text-text-primary transition-colors duration-200"
+            className="mt-4 font-inter text-brand-orange text-[12px] font-bold hover:text-text-primary transition-colors duration-200"
           >
             brigadir@tseh2.ru
           </a>
