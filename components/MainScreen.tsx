@@ -33,6 +33,7 @@ export default function MainScreen() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: [0.25, 0.1, 0.25, 1], delay: 0 }}
+          className="flex flex-col items-center"
         >
           <Image
             src="/logo.png"
@@ -42,6 +43,9 @@ export default function MainScreen() {
             className="w-[170px] sm:w-[220px] h-auto"
             priority
           />
+          <p className="font-inter text-brand-orange text-[14px] font-bold tracking-widest uppercase mt-3">
+            Вэлкам!
+          </p>
         </motion.div>
 
         {/* Info block */}
@@ -52,12 +56,12 @@ export default function MainScreen() {
           className="mt-8 flex flex-col items-center text-center"
         >
           {/* Address */}
-          <p className="font-inter text-text-muted text-[13px] font-light leading-relaxed">
+          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed">
             ул. Якова Эшпая, 150 · Йошкар-Ола
           </p>
 
           {/* Hours */}
-          <p className="font-inter text-text-muted text-[13px] font-light leading-relaxed mt-0.5">
+          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed mt-0.5">
             Вс–Чт · 12:00–23:00&nbsp;&nbsp;·&nbsp;&nbsp;Пт–Сб · 12:00–01:00
           </p>
 
@@ -94,7 +98,7 @@ export default function MainScreen() {
           {/* Email — secondary */}
           <a
             href="mailto:brigadir@tseh2.ru"
-            className="mt-5 font-inter text-text-muted text-[12px] font-light hover:text-text-primary transition-colors duration-200"
+            className="mt-5 font-inter text-brand-orange text-[12px] font-bold hover:text-text-primary transition-colors duration-200"
           >
             brigadir@tseh2.ru
           </a>
