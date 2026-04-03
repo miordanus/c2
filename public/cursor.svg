@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Mug body: trapezoid, slightly wider at top -->
+  <path
+    d="M7 10 L9 26 L21 26 L23 10 Z"
+    fill="none"
+    stroke="#ede9e1"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+  <!-- Handle: arc on right side mid-height -->
+  <path
+    d="M23 13 Q28 13 28 17 Q28 21 23 21"
+    fill="none"
+    stroke="#ede9e1"
+    stroke-width="1.5"
+    stroke-linecap="round"
+  />
+  <!-- Foam: three scallops above rim -->
+  <path
+    d="M7 10 Q9 6 11 10 Q13 6 15 10 Q17 6 19 10 Q21 6 23 10"
+    fill="none"
+    stroke="#ede9e1"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

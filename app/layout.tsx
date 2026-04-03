@@ -50,6 +50,9 @@ export const metadata: Metadata = {
       "Кафе-бар ЦЕХ №2: чебуреки, бургеры, 11 кранов пива. Ул. Якова Эшпая, 150.",
     images: ["/hero.jpg"],
   },
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
