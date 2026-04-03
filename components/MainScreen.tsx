@@ -43,8 +43,8 @@ export default function MainScreen() {
             className="w-[170px] sm:w-[220px] h-auto"
             priority
           />
-          <p className="font-inter text-brand-orange text-[14px] font-bold tracking-widest uppercase mt-3">
-            Вэлкам!
+          <p className="font-inter text-brand-orange text-[12px] font-bold tracking-widest uppercase mt-3">
+            Ждём в гости
           </p>
         </motion.div>
 
