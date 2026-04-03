@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "ЦЕХ №2",
     images: [
       {
-        url: "/hero.jpg",
+        url: "/c2/hero.jpg",
         width: 1920,
         height: 1080,
         alt: "ЦЕХ №2 — интерьер кафе-бара",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "ЦЕХ №2 — Кафе-бар · Йошкар-Ола",
     description:
       "Кафе-бар ЦЕХ №2: чебуреки, бургеры, 11 кранов пива. Ул. Якова Эшпая, 150.",
-    images: ["/hero.jpg"],
+    images: ["/c2/hero.jpg"],
   },
   icons: {
     icon: "/favicon.svg",

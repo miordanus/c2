@@ -30,9 +30,9 @@ body {
 /* Custom cursor — mouse/trackpad only, not touch */
 @media (pointer: fine) {
   body {
-    cursor: url('/cursor.svg') 8 0, auto;
+    cursor: url('/c2/cursor.svg') 8 0, auto;
   }
   a, button {
-    cursor: url('/cursor.svg') 8 0, pointer;
+    cursor: url('/c2/cursor.svg') 8 0, pointer;
   }
 }
