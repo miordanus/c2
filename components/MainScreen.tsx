@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 export default function MainScreen() {
   return (
     <section
-      className="relative w-full flex flex-col md:block overflow-hidden"
-      style={{ height: "100dvh" }}
+      className="relative w-full overflow-hidden"
+      style={{ height: "100svh" }}
     >
       {/* Background image */}
       <Image
@@ -27,7 +27,7 @@ export default function MainScreen() {
       />
 
       {/* Content — flex-1 ensures footer always stays at bottom */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-8 overflow-y-auto min-h-0 md:absolute md:inset-0 md:flex md:overflow-hidden">
+      <div className="relative z-10 absolute inset-0 flex flex-col items-center justify-center px-6 pb-20 overflow-hidden">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -117,7 +117,7 @@ export default function MainScreen() {
       </div>
 
       {/* Footer — natural flow, always at bottom */}
-      <div className="relative z-10 shrink-0 md:absolute md:bottom-0 md:left-0 md:right-0">
+      <div className="relative z-10 absolute bottom-0 left-0 right-0">
         <Footer />
       </div>
     </section>
