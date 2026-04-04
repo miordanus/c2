@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 export default function MainScreen() {
   return (
     <section
-      className="relative w-full overflow-hidden"
+      className="relative w-full flex flex-col overflow-hidden"
       style={{ height: "100dvh" }}
     >
       {/* Background image */}
@@ -20,14 +20,14 @@ export default function MainScreen() {
         sizes="100vw"
       />
 
-      {/* Flat dark overlay — no gradient */}
+      {/* Flat dark overlay */}
       <div
         className="absolute inset-0"
         style={{ background: "rgba(15,14,13,0.80)" }}
       />
 
-      {/* Logo + info — justify-center with pt-[10vh] shifts content ~5vh below true center */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center pt-[10vh] px-6">
+      {/* Content — flex-1 ensures footer always stays at bottom */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-8 overflow-y-auto min-h-0">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -43,13 +43,13 @@ export default function MainScreen() {
             className="w-[170px] sm:w-[220px] h-auto"
             priority
           />
-          <p className="font-inter text-brand-orange text-[11px] font-normal tracking-widest uppercase mt-3">
+          <p className="font-inter text-brand-orange text-[11px] font-bold tracking-widest uppercase mt-3">
             Кафе-бар · Йошкар-Ола
           </p>
-          <p className="font-inter text-text-primary text-[11px] font-light leading-snug mt-3 text-center">
+          <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 w-fit mt-3">
             Бургеры, чебуреки, пельмени, супы, и салаты.
           </p>
-          <p className="font-inter text-text-primary text-[11px] font-light leading-snug mt-0.5 text-center">
+          <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 w-fit mt-1.5">
             11 видов пенного на кране и холодильник крафта.
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export default function MainScreen() {
           {/* Phone */}
           <a
             href="tel:+79677550150"
-            className="mt-6 font-inter text-text-primary text-[21px] sm:text-[22px] font-normal leading-none tracking-tight hover:text-brand-orange transition-colors duration-200"
+            className="mt-6 font-inter bg-brand-orange text-text-primary text-[22px] sm:text-[24px] font-bold leading-none tracking-tight px-5 py-2.5 hover:opacity-80 transition-opacity duration-200"
           >
             +7 967 755-01-50
           </a>
@@ -111,8 +111,8 @@ export default function MainScreen() {
         </motion.div>
       </div>
 
-      {/* Footer pinned to bottom, outside the flex-centered container */}
-      <div className="absolute bottom-0 left-0 right-0">
+      {/* Footer — natural flow, always at bottom */}
+      <div className="relative z-10 shrink-0">
         <Footer />
       </div>
     </section>
