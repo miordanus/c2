@@ -43,7 +43,7 @@ export default function MainScreen() {
             className="w-[170px] sm:w-[220px] h-auto"
             priority
           />
-          <p className="font-inter text-text-muted text-[11px] font-normal tracking-widest uppercase mt-3">
+          <p className="font-inter text-brand-orange text-[11px] font-normal tracking-widest uppercase mt-3">
             Кафе-бар · Йошкар-Ола
           </p>
         </motion.div>
@@ -55,24 +55,13 @@ export default function MainScreen() {
           transition={{ duration: 0.65, ease: [0.25, 0.1, 0.25, 1], delay: 0.15 }}
           className="mt-8 flex flex-col items-center text-center"
         >
-          {/* Food descriptor */}
-          <p className="font-inter text-text-muted text-[12px] font-normal leading-relaxed mb-6">
-            Бургеры, чебуреки, пельмени, супы, салаты.
-          </p>
-
           {/* Address */}
-          <p className="font-inter text-text-muted text-[10px] font-normal tracking-widest uppercase leading-none">
-            Адрес
-          </p>
-          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed mt-1">
+          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed">
             ул. Якова Эшпая, 150 · Йошкар-Ола
           </p>
 
           {/* Hours */}
-          <p className="font-inter text-text-muted text-[10px] font-normal tracking-widest uppercase leading-none mt-4">
-            Режим работы
-          </p>
-          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed mt-1">
+          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed mt-0.5">
             Вс–Чт · 12:00–23:00&nbsp;&nbsp;·&nbsp;&nbsp;Пт–Сб · 12:00–01:00
           </p>
 
