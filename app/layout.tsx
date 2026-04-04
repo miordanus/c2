@@ -65,6 +65,13 @@ export default function RootLayout({
       lang="ru"
       className={`${bebasNeue.variable} ${inter.variable}`}
     >
+      <head>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline'"
+        />
+      </head>
       <body className="font-inter bg-bg-base text-text-primary">
         {children}
       </body>
