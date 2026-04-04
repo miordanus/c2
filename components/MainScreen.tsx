@@ -21,13 +21,10 @@ export default function MainScreen() {
       />
 
       {/* Flat dark overlay */}
-      <div
-        className="absolute inset-0"
-        style={{ background: "rgba(15,14,13,0.80)" }}
-      />
+      <div className="absolute inset-0 z-[1] bg-black/50" />
 
       {/* Content — flex-1 ensures footer always stays at bottom */}
-      <div className="relative z-10 absolute inset-0 flex flex-col items-center justify-center px-6 pb-20 overflow-hidden">
+      <div className="relative z-10 absolute inset-0 flex flex-col items-center justify-center px-6 pb-28 overflow-hidden">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
