@@ -43,7 +43,7 @@ export default function MainScreen() {
             className="w-[170px] sm:w-[220px] h-auto"
             priority
           />
-          <p className="font-inter text-text-muted text-[11px] font-normal tracking-widest uppercase mt-3">
+          <p className="font-inter text-brand-orange text-[11px] font-normal tracking-widest uppercase mt-3">
             Кафе-бар · Йошкар-Ола
           </p>
         </motion.div>
