@@ -23,7 +23,7 @@ export default function MainScreen() {
       {/* Flat dark overlay — no gradient */}
       <div
         className="absolute inset-0"
-        style={{ background: "rgba(15,14,13,0.72)" }}
+        style={{ background: "rgba(15,14,13,0.80)" }}
       />
 
       {/* Logo + info — justify-center with pt-[10vh] shifts content ~5vh below true center */}
@@ -46,6 +46,12 @@ export default function MainScreen() {
           <p className="font-inter text-brand-orange text-[11px] font-normal tracking-widest uppercase mt-3">
             Кафе-бар · Йошкар-Ола
           </p>
+          <p className="font-inter text-text-primary text-[11px] font-light leading-snug mt-3 text-center">
+            Бургеры, чебуреки, пельмени, супы, и салаты.
+          </p>
+          <p className="font-inter text-text-primary text-[11px] font-light leading-snug mt-0.5 text-center">
+            11 видов пенного на кране и холодильник крафта.
+          </p>
         </motion.div>
 
         {/* Info block */}
@@ -57,7 +63,7 @@ export default function MainScreen() {
         >
           {/* Address */}
           <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed">
-            ул. Якова Эшпая, 150 · Йошкар-Ола
+            ул. Якова Эшпая, 150
           </p>
 
           {/* Hours */}
