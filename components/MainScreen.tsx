@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 export default function MainScreen() {
   return (
     <section
-      className="relative w-full flex flex-col overflow-hidden"
+      className="relative w-full flex flex-col md:block overflow-hidden"
       style={{ height: "100dvh" }}
     >
       {/* Background image */}
@@ -27,7 +27,7 @@ export default function MainScreen() {
       />
 
       {/* Content — flex-1 ensures footer always stays at bottom */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-8 overflow-y-auto min-h-0">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-8 overflow-y-auto min-h-0 md:absolute md:inset-0 md:flex md:overflow-hidden">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -46,12 +46,14 @@ export default function MainScreen() {
           <p className="font-inter text-brand-orange text-[11px] font-bold tracking-widest uppercase mt-3">
             Кафе-бар · Йошкар-Ола
           </p>
-          <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 w-fit mt-3">
-            Бургеры, чебуреки, пельмени, супы, и салаты.
-          </p>
-          <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 w-fit mt-1.5">
-            11 видов пенного на кране и холодильник крафта.
-          </p>
+          <div className="flex flex-col mt-3 gap-1.5">
+            <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 text-center">
+              Бургеры, чебуреки, пельмени, супы, и салаты.
+            </p>
+            <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 text-center">
+              11 видов пенного на кране и холодильник крафта.
+            </p>
+          </div>
         </motion.div>
 
         {/* Info block */}
@@ -62,13 +64,16 @@ export default function MainScreen() {
           className="mt-8 flex flex-col items-center text-center"
         >
           {/* Address */}
-          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed">
+          <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug">
             ул. Якова Эшпая, 150
           </p>
 
           {/* Hours */}
-          <p className="font-inter text-brand-orange text-[13px] font-bold leading-relaxed mt-0.5">
-            Вс–Чт · 12:00–23:00&nbsp;&nbsp;·&nbsp;&nbsp;Пт–Сб · 12:00–01:00
+          <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-1">
+            Вс–Чт · 12:00–23:00
+          </p>
+          <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-0.5">
+            Пт–Сб · 12:00–01:00
           </p>
 
           {/* Phone */}
@@ -112,7 +117,7 @@ export default function MainScreen() {
       </div>
 
       {/* Footer — natural flow, always at bottom */}
-      <div className="relative z-10 shrink-0">
+      <div className="relative z-10 shrink-0 md:absolute md:bottom-0 md:left-0 md:right-0">
         <Footer />
       </div>
     </section>
