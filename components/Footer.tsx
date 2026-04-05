@@ -1,16 +1,16 @@
 export default function Footer() {
   return (
     <footer
-      className="border-t border-border-subtle px-5"
+      className="shrink-0 border-t border-white/[0.08] px-5"
       style={{
-        paddingTop: "clamp(6px, 1.5vh, 16px)",
-        paddingBottom: "max(clamp(6px, 1.5vh, 16px), env(safe-area-inset-bottom))",
+        paddingTop: "clamp(6px, 1.2vh, 14px)",
+        paddingBottom: "max(clamp(6px, 1.2vh, 14px), env(safe-area-inset-bottom))",
       }}
     >
-      <p className="text-center font-inter text-text-muted text-sm font-normal">
+      <p className="text-center font-inter text-text-muted text-[11px] font-normal">
         © 2026 ЦЕХ №2
       </p>
-      <div className="mt-2 flex flex-col items-center">
+      <div className="mt-1 flex flex-col items-center">
         <p className="text-center font-inter text-text-muted text-[10px] font-normal leading-relaxed">
           ООО «Подходяще» · ОГРН 1241200002955 · ИНН 1200016105
         </p>
