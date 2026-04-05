@@ -1,6 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-border-subtle py-4 px-5">
+    <footer
+      className="border-t border-border-subtle px-5"
+      style={{
+        paddingTop: "clamp(6px, 1.5vh, 16px)",
+        paddingBottom: "max(clamp(6px, 1.5vh, 16px), env(safe-area-inset-bottom))",
+      }}
+    >
       <p className="text-center font-inter text-text-muted text-sm font-normal">
         © 2026 ЦЕХ №2
       </p>
