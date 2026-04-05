@@ -6,31 +6,35 @@ import Footer from "@/components/Footer";
 
 export default function MainScreen() {
   return (
-    <section
-      className="relative w-full overflow-hidden flex flex-col"
-      style={{ height: "100dvh" }}
-    >
-      {/* Background image */}
-      <Image
-        src="/hero.jpg"
-        alt="ЦЕХ №2 — интерьер кафе-бара"
-        fill
-        className="object-cover"
-        priority
-        sizes="100vw"
-      />
+    <section className="relative h-[100dvh] overflow-hidden">
 
-      {/* Flat dark overlay */}
-      <div className="absolute inset-0 z-[1] bg-black/50" />
+      {/* 1. Background image — absolute fill layer */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero.jpg"
+          alt="ЦЕХ №2 — интерьер кафе-бара"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+      </div>
 
-      {/* Content wrapper — flex-1 fills full section height, no absolute positioning */}
-      <div className="relative z-10 flex flex-col flex-1 min-h-0">
+      {/* 2. Flat dark overlay */}
+      <div className="absolute inset-0 z-[1] bg-black/55" />
 
-        {/* Main content — centered vertically in remaining space */}
-        <div className="flex-1 flex flex-col items-center justify-center px-6 overflow-hidden"
-          style={{ paddingTop: "clamp(12px, 2vh, 24px)", paddingBottom: "clamp(12px, 2vh, 24px)" }}
+      {/* 3. Gradient — ties content into photo, darkens bottom for footer */}
+      <div className="absolute inset-0 z-[2] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.25)_0%,rgba(0,0,0,0.5)_50%,rgba(0,0,0,0.82)_100%)]" />
+
+      {/* 4. Content layer — h-full flex column, all in one screen */}
+      <div className="relative z-10 h-full flex flex-col">
+
+        {/* Main content — vertically centered, pb shifts it above optical center */}
+        <div
+          className="flex-1 flex flex-col items-center justify-center px-6 overflow-hidden"
+          style={{ paddingBottom: "clamp(24px, 5vh, 64px)" }}
         >
-          {/* Logo */}
+          {/* Logo block */}
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,18 +118,18 @@ export default function MainScreen() {
               </a>
             </div>
 
-            {/* Email — secondary */}
+            {/* Email */}
             <a
               href="mailto:brigadir@tseh2.ru"
               className="font-inter text-brand-orange text-[12px] font-bold hover:text-text-primary transition-colors duration-200"
-              style={{ marginTop: "clamp(8px, 2vh, 20px)" }}
+              style={{ marginTop: "clamp(6px, 1.5vh, 14px)" }}
             >
               brigadir@tseh2.ru
             </a>
           </motion.div>
         </div>
 
-        {/* Footer — last element in flex column, naturally at bottom */}
+        {/* Footer — shrink-0 keeps it compact at the bottom of the same screen */}
         <Footer />
       </div>
     </section>
