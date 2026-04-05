@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer
-      className="shrink-0 border-t border-border-subtle px-5"
+      className="shrink-0 border-t border-white/[0.08] px-5"
       style={{
         paddingTop: "clamp(6px, 1.2vh, 14px)",
         paddingBottom: "max(clamp(6px, 1.2vh, 14px), env(safe-area-inset-bottom))",

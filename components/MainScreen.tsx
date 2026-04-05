@@ -20,11 +20,8 @@ export default function MainScreen() {
         />
       </div>
 
-      {/* 2. Flat dark overlay */}
-      <div className="absolute inset-0 z-[1] bg-black/55" />
-
-      {/* 3. Gradient — ties content into photo, darkens bottom for footer */}
-      <div className="absolute inset-0 z-[2] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.25)_0%,rgba(0,0,0,0.5)_50%,rgba(0,0,0,0.82)_100%)]" />
+      {/* 2. Single gradient overlay — photo visible throughout, darker at bottom for footer readability */}
+      <div className="absolute inset-0 z-[1] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.38)_0%,rgba(0,0,0,0.52)_55%,rgba(0,0,0,0.7)_100%)]" />
 
       {/* 4. Content layer — h-full flex column, all in one screen */}
       <div className="relative z-10 h-full flex flex-col">
