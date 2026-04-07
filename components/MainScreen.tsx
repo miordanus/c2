@@ -50,7 +50,7 @@ export default function MainScreen() {
             <p className="font-inter text-brand-orange text-[11px] font-bold tracking-widest uppercase mt-3">
               Кафе-бар · Йошкар-Ола
             </p>
-            <div className="flex flex-col mt-3 gap-1.5">
+            <div className="flex flex-col mt-3 gap-2">
               <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 text-center">
                 Бургеры, чебуреки, пельмени, супы, и салаты.
               </p>
@@ -66,7 +66,7 @@ export default function MainScreen() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: [0.25, 0.1, 0.25, 1], delay: 0.15 }}
             className="flex flex-col items-center text-center"
-            style={{ marginTop: "clamp(12px, 3vh, 32px)" }}
+            style={{ marginTop: "clamp(20px, 4vh, 40px)" }}
           >
             {/* Address */}
             <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug">
@@ -74,10 +74,10 @@ export default function MainScreen() {
             </p>
 
             {/* Hours */}
-            <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-1">
+            <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-2">
               Вс–Чт · 12:00–23:00
             </p>
-            <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-0.5">
+            <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-1">
               Пт–Сб · 12:00–01:00
             </p>
 
@@ -85,7 +85,7 @@ export default function MainScreen() {
             <a
               href="tel:+79677550150"
               className="font-inter bg-brand-orange text-text-primary text-[22px] sm:text-[24px] font-bold leading-none tracking-tight px-5 py-2.5 hover:opacity-80 transition-opacity duration-200"
-              style={{ marginTop: "clamp(10px, 2.5vh, 24px)" }}
+              style={{ marginTop: "clamp(16px, 3.5vh, 28px)" }}
             >
               +7 967 755-01-50
             </a>
@@ -93,7 +93,7 @@ export default function MainScreen() {
             {/* Map buttons */}
             <div
               className="flex flex-row gap-3"
-              style={{ marginTop: "clamp(10px, 2.5vh, 24px)" }}
+              style={{ marginTop: "clamp(16px, 3.5vh, 28px)" }}
             >
               <a
                 href="https://2gis.ru/yoshkarola/firm/70000001110338386?m=47.882863%2C56.639735%2F16"
@@ -119,7 +119,7 @@ export default function MainScreen() {
             <a
               href="mailto:brigadir@tseh2.ru"
               className="font-inter text-brand-orange text-[12px] font-bold hover:text-text-primary transition-colors duration-200"
-              style={{ marginTop: "clamp(6px, 1.5vh, 14px)" }}
+              style={{ marginTop: "clamp(10px, 2vh, 18px)" }}
             >
               brigadir@tseh2.ru
             </a>
