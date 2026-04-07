@@ -74,10 +74,10 @@ export default function MainScreen() {
             </p>
 
             {/* Hours */}
-            <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-2">
+            <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-1">
               Вс–Чт · 12:00–23:00
             </p>
-            <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-1">
+            <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug mt-0.5">
               Пт–Сб · 12:00–01:00
             </p>
 
