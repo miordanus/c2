@@ -38,7 +38,7 @@ export default function MainScreen() {
             transition={{ duration: 0.65, ease: [0.25, 0.1, 0.25, 1], delay: 0 }}
             className="flex flex-col items-center"
           >
-            <p className="font-bebas tracking-widest text-[15px] text-brand-orange uppercase mb-3">
+            <p className="font-bebas tracking-widest text-[15px] text-brand-orange uppercase mb-8">
               Кафе-бар
             </p>
             <Image
@@ -49,7 +49,7 @@ export default function MainScreen() {
               className="w-[170px] sm:w-[220px] h-auto"
               priority
             />
-            <div className="flex flex-col mt-3 gap-1.5">
+            <div className="flex flex-col mt-6 gap-1.5">
               <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 text-center">
                 Бургеры, чебуреки, пельмени, супы, и салаты
               </p>
@@ -64,10 +64,10 @@ export default function MainScreen() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: [0.25, 0.1, 0.25, 1], delay: 0.15 }}
-            className="mt-8 flex flex-col items-center text-center"
+            className="mt-6 flex flex-col items-center text-center"
           >
             {/* Address */}
-            <p className="font-inter text-white text-[17px] font-bold leading-snug uppercase tracking-wide">
+            <p className="font-inter text-white text-[17px] font-bold leading-snug tracking-wide">
               ул. Я. Эшпая, 150
             </p>
 
