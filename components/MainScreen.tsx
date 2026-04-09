@@ -23,7 +23,7 @@ export default function MainScreen() {
       {/* 2. Single gradient overlay — photo visible throughout, darker at bottom for footer readability */}
       <div className="absolute inset-0 z-[1] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.38)_0%,rgba(0,0,0,0.52)_55%,rgba(0,0,0,0.7)_100%)]" />
 
-      {/* 4. Content layer — h-full flex column, all in one screen */}
+      {/* Content layer — h-full flex column, all in one screen */}
       <div className="relative z-10 h-full flex flex-col">
 
         {/* Main content — vertically centered, pb shifts it above optical center */}
@@ -43,19 +43,18 @@ export default function MainScreen() {
               alt="ЦЕХ №2"
               width={220}
               height={88}
-              className="h-auto"
-              style={{ width: "clamp(130px, 18vh, 220px)" }}
+              className="w-[170px] sm:w-[220px] h-auto"
               priority
             />
-            <p className="font-inter text-brand-orange text-[11px] font-bold tracking-widest uppercase mt-3">
-              Кафе-бар · Йошкар-Ола
+            <p className="font-bebas tracking-widest text-[15px] text-brand-orange mt-3">
+              Кафе-бар
             </p>
-            <div className="flex flex-col mt-3 gap-2">
+            <div className="flex flex-col mt-3 gap-1.5">
               <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 text-center">
-                Бургеры, чебуреки, пельмени, супы, и салаты.
+                Бургеры, чебуреки, пельмени, супы, и салаты
               </p>
               <p className="font-inter bg-brand-orange text-text-primary text-[13px] font-bold leading-none px-3 py-1.5 text-center">
-                11 видов пенного на кране и холодильник крафта.
+                11 видов пенного на кране и холодильник крафта
               </p>
             </div>
           </motion.div>
@@ -65,8 +64,7 @@ export default function MainScreen() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: [0.25, 0.1, 0.25, 1], delay: 0.15 }}
-            className="flex flex-col items-center text-center"
-            style={{ marginTop: "clamp(20px, 4vh, 40px)" }}
+            className="mt-8 flex flex-col items-center text-center"
           >
             {/* Address */}
             <p className="font-inter text-brand-orange text-[17px] font-bold leading-snug">
@@ -84,17 +82,13 @@ export default function MainScreen() {
             {/* Phone */}
             <a
               href="tel:+79677550150"
-              className="font-inter bg-brand-orange text-text-primary text-[22px] sm:text-[24px] font-bold leading-none tracking-tight px-5 py-2.5 hover:opacity-80 transition-opacity duration-200"
-              style={{ marginTop: "clamp(16px, 3.5vh, 28px)" }}
+              className="mt-6 font-bebas bg-brand-orange text-text-primary text-[28px] sm:text-[32px] leading-none px-5 py-2.5 hover:opacity-80 transition-opacity duration-200"
             >
               +7 967 755-01-50
             </a>
 
             {/* Map buttons */}
-            <div
-              className="flex flex-row gap-3"
-              style={{ marginTop: "clamp(16px, 3.5vh, 28px)" }}
-            >
+            <div className="mt-6 flex flex-row gap-3">
               <a
                 href="https://2gis.ru/yoshkarola/firm/70000001110338386?m=47.882863%2C56.639735%2F16"
                 target="_blank"
@@ -118,8 +112,7 @@ export default function MainScreen() {
             {/* Email */}
             <a
               href="mailto:brigadir@tseh2.ru"
-              className="font-inter text-brand-orange text-[12px] font-bold hover:text-text-primary transition-colors duration-200"
-              style={{ marginTop: "clamp(10px, 2vh, 18px)" }}
+              className="mt-5 font-inter text-brand-orange text-[12px] font-bold hover:text-text-primary transition-colors duration-200"
             >
               brigadir@tseh2.ru
             </a>
