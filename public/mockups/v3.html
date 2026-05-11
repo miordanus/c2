@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ЦЕХ №2 — Cozy Bar · мокап 03</title>
+<link rel="icon" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet" />
+<style>
+  :root{--bg:#1a1410;--bg2:#241a13;--amber:#f0a04b;--amber-soft:#f5b97a;--cream:#f3e7d3;--muted:#a89377;--card:#221913;--line:#3a2a1f}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--cream);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  body{background:radial-gradient(1200px 800px at 80% -10%,rgba(240,160,75,.18),transparent 60%),radial-gradient(900px 700px at -10% 110%,rgba(240,160,75,.12),transparent 60%),var(--bg)}
+  .navchip{position:fixed;top:14px;right:14px;z-index:50;background:var(--cream);color:var(--bg);font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;border-radius:999px;font-weight:600}
+  .wrap{max-width:1180px;margin:0 auto;padding:48px 28px 80px}
+  .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:42px}
+  .mark{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.18em;color:var(--cream)}
+  .mark b{color:var(--amber)}
+  .nlinks{display:flex;gap:22px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .nlinks a:hover{color:var(--amber)}
+
+  .hero{position:relative;border-radius:24px;overflow:hidden;min-height:64vh;display:flex;align-items:flex-end;padding:48px;isolation:isolate}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.92) brightness(.78)}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(26,20,16,.1) 0%,rgba(26,20,16,.35) 45%,rgba(26,20,16,.92) 100%),radial-gradient(700px 400px at 20% 80%,rgba(240,160,75,.32),transparent 60%)}
+  .hcontent{max-width:680px}
+  .pill{display:inline-block;background:rgba(243,231,211,.12);backdrop-filter:blur(8px);border:1px solid rgba(243,231,211,.18);color:var(--cream);padding:8px 16px;border-radius:999px;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+  .pill .dot{display:inline-block;width:8px;height:8px;background:#7be07b;border-radius:50%;margin-right:8px;box-shadow:0 0 0 4px rgba(123,224,123,.18);vertical-align:middle}
+  .h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,11vw,148px);line-height:.92;letter-spacing:.02em;margin:18px 0 12px}
+  .h1 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;color:var(--amber);letter-spacing:0}
+  .sublede{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;line-height:1.4;color:var(--cream);opacity:.92;max-width:520px}
+
+  .tonight{margin-top:-72px;margin-left:auto;margin-right:48px;max-width:420px;position:relative;z-index:2;background:linear-gradient(180deg,#2b1f17,#1f1611);border:1px solid var(--line);border-radius:20px;padding:28px 30px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+  .tonight .t{font-family:'Bebas Neue',sans-serif;letter-spacing:.22em;color:var(--amber);font-size:14px;margin-bottom:10px}
+  .tonight .hh{font-family:'Bebas Neue',sans-serif;font-size:44px;line-height:1;color:var(--cream)}
+  .tonight .sm{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.55}
+
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:72px 0}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px;transition:.25s}
+  .tile:hover{transform:translateY(-4px);border-color:var(--amber)}
+  .tile .ic{width:48px;height:48px;border-radius:14px;background:rgba(240,160,75,.14);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;color:var(--amber)}
+  .tile h3{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.06em;margin:0 0 8px;color:var(--cream)}
+  .tile p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+
+  .contact{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;margin-top:24px}
+  .ccard{background:linear-gradient(180deg,#2a1f17,#1d1410);border:1px solid var(--line);border-radius:24px;padding:40px}
+  .ccard .lbl{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .phone{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,7vw,72px);line-height:1;color:var(--cream);padding:16px 26px;border-radius:16px;background:linear-gradient(180deg,var(--amber),#d8853a);color:#1a1410;box-shadow:0 14px 40px -10px rgba(240,160,75,.55);transition:.2s}
+  .phone:hover{transform:translateY(-2px)}
+  .addr{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:.04em;color:var(--cream);margin-top:6px}
+  .meta{color:var(--muted);font-size:14px;line-height:1.7;margin-top:8px}
+  .btns{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+  .btn{font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:11px 16px;border-radius:999px;border:1px solid var(--line);color:var(--cream);transition:.2s}
+  .btn:hover{border-color:var(--amber);color:var(--amber)}
+  .btn.solid{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+
+  footer{margin-top:64px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  footer b{color:var(--amber)}
+
+  @media(max-width:880px){
+    .hero{padding:32px;min-height:60vh}
+    .tonight{margin:-48px 0 0;max-width:none}
+    .strip,.contact{grid-template-columns:1fr}
+    .nlinks{display:none}
+  }
+</style>
+</head>
+<body>
+  <a class="navchip" href="index.html">03 · Cozy Bar · ← мокапы</a>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="mark">ЦЕХ <b>№2</b></div>
+      <div class="nlinks"><a href="#tonight">Сегодня</a><a href="#menu">Меню</a><a href="#where">Где мы</a></div>
+    </nav>
+
+    <section class="hero">
+      <img src="/hero.jpg" alt="Интерьер ЦЕХ №2" />
+      <div class="hcontent">
+        <span class="pill"><span class="dot"></span>Сейчас открыто · до 23:00</span>
+        <h1 class="h1">Тёплый вечер<br/><em>начинается здесь</em></h1>
+        <p class="sublede">Соседский кафе-бар на Я. Эшпая. Пенное, кухня, разговоры до закрытия — как дома, только лучше.</p>
+      </div>
+    </section>
+
+    <aside class="tonight" id="tonight">
+      <div class="t">Сегодня вечером</div>
+      <div class="hh">12:00 — 23:00</div>
+      <div class="sm">Вс–Чт до 23:00 · Пт–Сб до 01:00. Заглядывай без повода — найдём место и кружку.</div>
+    </aside>
+
+    <section class="strip" id="menu">
+      <div class="tile">
+        <div class="ic">🍺</div>
+        <h3>Пенное</h3>
+        <p>11 видов на кране и целый холодильник крафта. Меняем позиции — приходи пробовать новое.</p>
+      </div>
+      <div class="tile">
+        <div class="ic">🥟</div>
+        <h3>Кухня</h3>
+        <p>Бургеры, чебуреки, пельмени, супы и салаты. Сытно, по-домашнему, без сюрпризов в счёте.</p>
+      </div>
+      <div class="tile">
+        <div class="ic">🪑</div>
+        <h3>Компания</h3>
+        <p>Соседский бар без дресс-кода. После работы, перед выходными, или просто — так.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="where">
+      <div class="ccard">
+        <div class="lbl">Позвонить — забронировать стол</div>
+        <a class="phone" href="tel:+79677550150">+7 967 755-01-50</a>
+        <div class="meta" style="margin-top:18px">Или напиши: <a style="color:var(--amber)" href="mailto:brigadir@tseh2.ru">brigadir@tseh2.ru</a></div>
+      </div>
+      <div class="ccard">
+        <div class="lbl">Найти нас</div>
+        <div class="addr">ул. Я. Эшпая, 150</div>
+        <div class="meta">Йошкар-Ола, Республика Марий Эл<br/>Парковка во дворе · вход с улицы</div>
+        <div class="btns">
+          <a class="btn solid" href="https://2gis.ru/yoshkarola/firm/70000001110338386?m=47.882863%2C56.639735%2F16" target="_blank" rel="noopener">2ГИС</a>
+          <a class="btn" href="https://yandex.ru/maps/org/tsekh_2/225450224234/?ll=47.882962%2C56.639981&z=16.74" target="_blank" rel="noopener">Яндекс Карты</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© ЦЕХ <b>№2</b> · кафе-бар · Йошкар-Ола</div>
+      <div>с 2017 года · с любовью к гостям</div>
+    </footer>
+  </div>
+</body>
+</html>
