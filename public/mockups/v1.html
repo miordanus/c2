@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ЦЕХ №2 — Editorial · мокап 01</title>
+<link rel="icon" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root{--paper:#f5f1e8;--ink:#1a1714;--orange:#E8810A;--muted:#6b6357;--rule:#1a1714}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .navchip{position:fixed;top:14px;right:14px;z-index:50;background:var(--ink);color:var(--paper);font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:8px 12px;text-decoration:none;border-radius:2px}
+  .page{max-width:1240px;margin:0 auto;padding:32px 40px 80px}
+  .masthead{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--ink);padding-bottom:14px;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+  .masthead .iss{color:var(--muted)}
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end;padding:56px 0 40px;border-bottom:1px solid var(--ink)}
+  .kicker{font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .title{font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,14vw,200px);line-height:.88;letter-spacing:.01em;margin:0}
+  .title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;color:var(--orange)}
+  .lede{font-family:'Playfair Display',serif;font-size:22px;line-height:1.4;color:var(--ink);max-width:38ch}
+  .lede::first-letter{font-size:2.4em;float:left;line-height:.9;padding:6px 8px 0 0;font-weight:700}
+  .heroimg{margin:32px 0 0;width:100%;aspect-ratio:16/8;object-fit:cover;filter:saturate(.92) contrast(1.05);border:1px solid var(--ink)}
+  .figcap{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;padding:56px 0;border-bottom:1px solid var(--ink)}
+  .col h3{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;font-weight:600}
+  .col p{font-family:'Playfair Display',serif;font-size:19px;line-height:1.5;margin:0 0 6px}
+  .col .accent{color:var(--orange)}
+  .pull{padding:80px 0;text-align:center}
+  .pull q{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(40px,7vw,82px);line-height:1.05;quotes:"«" "»";color:var(--ink)}
+  .pull q:before{content:open-quote;color:var(--orange)}
+  .pull q:after{content:close-quote;color:var(--orange)}
+  .pull .by{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:22px}
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:48px 0;border-top:2px solid var(--ink);align-items:start}
+  .phone{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,96px);line-height:.9;text-decoration:none;display:block}
+  .phone:hover{color:var(--orange)}
+  .row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+  .btn{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:10px 16px;border:1px solid var(--ink);text-decoration:none;color:var(--ink);transition:.2s}
+  .btn:hover{background:var(--ink);color:var(--paper)}
+  .btn.primary{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+  .meta{font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:var(--muted)}
+  .meta b{color:var(--ink);font-weight:600}
+  .endline{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.2em;text-align:center;padding-top:48px;color:var(--muted)}
+  @media(max-width:780px){
+    .page{padding:24px 20px 60px}
+    .hero,.cols,.contact{grid-template-columns:1fr;gap:28px;padding:32px 0}
+    .lede{max-width:none}
+  }
+</style>
+</head>
+<body>
+  <a class="navchip" href="index.html">01 — Editorial · ← мокапы</a>
+  <div class="page">
+    <header class="masthead">
+      <div>ЦЕХ №2 · Йошкар-Ола</div>
+      <div class="iss">Выпуск № — кафе-бар · est. 2017</div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="kicker">Кафе · бар · кухня</div>
+        <h1 class="title">ЦЕХ<br/><em>№два</em></h1>
+      </div>
+      <p class="lede">Одиннадцать видов пенного на кране, холодильник крафта, чебуреки и пельмени до часа ночи по пятницам. Соседский бар на Я. Эшпая.</p>
+    </section>
+
+    <img class="heroimg" src="/hero.jpg" alt="Интерьер ЦЕХ №2" />
+    <div class="figcap">Фото · интерьер заведения · ул. Я. Эшпая 150</div>
+
+    <section class="cols">
+      <div class="col">
+        <h3>Кухня</h3>
+        <p>Бургеры</p>
+        <p>Чебуреки</p>
+        <p>Пельмени</p>
+        <p>Супы и салаты</p>
+      </div>
+      <div class="col">
+        <h3>Бар</h3>
+        <p><span class="accent">11</span> видов пенного на кране</p>
+        <p>Холодильник крафта</p>
+        <p>Сезонные позиции</p>
+      </div>
+      <div class="col">
+        <h3>Часы</h3>
+        <p>Вс — Чт<br/><span class="accent">12:00 — 23:00</span></p>
+        <p>Пт — Сб<br/><span class="accent">12:00 — 01:00</span></p>
+      </div>
+    </section>
+
+    <section class="pull">
+      <q>Пиво. Еда. Друзья.</q>
+      <div class="by">— что-то про ЦЕХ №2 в трёх словах</div>
+    </section>
+
+    <section class="contact">
+      <div>
+        <div class="kicker">Позвонить</div>
+        <a class="phone" href="tel:+79677550150">+7 967 755-01-50</a>
+        <div class="row">
+          <a class="btn primary" href="https://2gis.ru/yoshkarola/firm/70000001110338386?m=47.882863%2C56.639735%2F16" target="_blank" rel="noopener">2ГИС</a>
+          <a class="btn" href="https://yandex.ru/maps/org/tsekh_2/225450224234/?ll=47.882962%2C56.639981&z=16.74" target="_blank" rel="noopener">Яндекс Карты</a>
+          <a class="btn" href="mailto:brigadir@tseh2.ru">brigadir@tseh2.ru</a>
+        </div>
+      </div>
+      <div class="meta">
+        <b>Адрес</b><br/>ул. Я. Эшпая, 150<br/>Йошкар-Ола, Республика Марий Эл<br/><br/>
+        <b>Связь</b><br/>brigadir@tseh2.ru<br/>+7 967 755-01-50
+      </div>
+    </section>
+
+    <div class="endline">— · конец полосы · —</div>
+  </div>
+</body>
+</html>
